@@ -18,6 +18,6 @@ describe "BugherdAPI::User" do
     user.name.should == 'Rafael'
     user.id.should == 1798
     user.surname.should == 'George'
-    user.email.should == ''
+    user.email.should == 'george.rafael@gmail.com'
   end
 end

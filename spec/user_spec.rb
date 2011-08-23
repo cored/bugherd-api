@@ -17,7 +17,7 @@ describe "BugherdAPI::User" do
     user = BugherdAPI::User.find(:all).first
     user.name.should == 'Rafael'
     user.id.should == 1798
-    user.surname.should == ''
+    user.surname.should == 'George'
     user.email.should == ''
   end
 end

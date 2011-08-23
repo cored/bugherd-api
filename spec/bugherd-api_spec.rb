@@ -5,7 +5,7 @@ describe "BugherdApi" do
   context "Authentication" do 
     it "should authenticate with Bugherd server" do 
       bugherd = BugherdAPI.authenticate('user@email.com', '123456')
-      bugherd.should not_be_nil
+      bugherd.should_not be_nil
     end
   end
 end

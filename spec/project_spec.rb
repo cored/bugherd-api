@@ -9,20 +9,26 @@ describe "BugherdAPI::Project" do
     end
   end
 
-  it "should load all projects" do 
-    projects = BugherdAPI::Project.find(:all)
-    projects.should_not be_nil 
+  context "Project retrieval" do 
+    it "should load all projects" do 
+      projects = BugherdAPI::Project.find(:all)
+      projects.should_not be_nil 
+    end
+
+    it "shoulod load a single project" do 
+      project = BugherdAPI::Project.find(1458)
+      project.should_not be_nil
+    end
+
+    it "should check for projects fields" do 
+      project = BugherdAPI::Project.find(1458)
+      project.name.should == 'clutchapptest'
+      project.devurl.should == 'http://clutchapptest.ticketmaster.com'
+    end
   end
 
-  it "shoulod load a single project" do 
-    project = BugherdAPI::Project.find(1458)
-    project.should_not be_nil
+  context "Project creation and update" do 
+    it "should create a project"
+    it "should update a project"
   end
-
-  it "should check for projects fields" do 
-    project = BugherdAPI::Project.find(1458)
-    project.name.should == 'clutchapptest'
-    project.devurl.should == 'http://clutchapptest.ticketmaster.com'
-  end
-
 end

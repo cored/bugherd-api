@@ -1,6 +1,13 @@
 = bugherd-api
 
-Description goes here.
+Ruby library for interacting with Bugherd API[http://www.bugherd.com/api]
+
+== Documentation and Dependencies
+
+* ActiveResource
+* ActiveSupport
+
+== Examples (Comming Soon)
 
 == Contributing to bugherd-api
  

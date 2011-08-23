@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bugherd-api"
   gem.homepage = "http://github.com/cored/bugherd-api"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{BugherdAPI wrapper}
+  gem.description = %Q{BugherdAPI wrapper}
   gem.email = "george.rafael@gmail.com"
   gem.authors = ["Rafael George"]
   # dependencies defined in Gemfile

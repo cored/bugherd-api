@@ -7,8 +7,9 @@ require 'active_resource'
 module BugherdAPI
   extend ActiveSupport::Autoload
 
-  autoload :Base, 'bugherd/base'
-  autoload :User, 'bugherd/user'
+  autoload :Base,       'bugherd/base'
+  autoload :User,       'bugherd/user'
+  autoload :Project,    'bugherd/project'
   class Error < StandardError; end
 
   class << self

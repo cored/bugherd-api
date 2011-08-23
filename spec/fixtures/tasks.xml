@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks type="array">
+  <task>
+    <id type="integer">5019</id>
+    <description>Should return nil withou asignee
+</description>
+    <status-id type="integer">0</status-id>
+    <priority-id type="integer" nil="true"></priority-id>
+    <assigned-to-id type="integer" nil="true"></assigned-to-id>
+  </task>
+  <task>
+    <id type="integer">4950</id>
+    <description>Now this one should be green not red</description>
+    <status-id type="integer">2</status-id>
+    <priority-id type="integer" nil="true"></priority-id>
+    <assigned-to-id type="integer">1798</assigned-to-id>
+  </task>
+  <task>
+    <id type="integer">4949</id>
+    <description>This button should use another color</description>
+    <status-id type="integer">2</status-id>
+    <priority-id type="integer" nil="true"></priority-id>
+    <assigned-to-id type="integer">1798</assigned-to-id>
+  </task>
+</tasks>

@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "bugherd-api.gemspec",
     "lib/bugherd-api.rb",
     "lib/bugherd.rb",
     "lib/bugherd/.project.rb.swp",

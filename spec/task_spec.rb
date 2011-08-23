@@ -21,4 +21,14 @@ describe "BugherdAPI::Task" do
       task.should_not be_nil
     end
   end
+
+  context "Creating tasks, updating and deleting" do 
+    it "should create a task"
+    it "should update a task"
+    it "should delete a task"
+  end
+
+  context "Creating comments" do 
+    it "should create a comment"
+  end
 end

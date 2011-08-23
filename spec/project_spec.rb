@@ -27,8 +27,9 @@ describe "BugherdAPI::Project" do
     end
   end
 
-  context "Project creation and update" do 
+  context "Project creation, update and delete" do 
     it "should create a project"
     it "should update a project"
+    it "should delete a project"
   end
 end

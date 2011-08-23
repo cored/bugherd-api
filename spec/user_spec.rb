@@ -12,4 +12,12 @@ describe "BugherdAPI::User" do
     users = BugherdAPI::User.find(:all) 
     users.should_not be_nil
   end
+
+  it "should retrieve valid fields for a single user" do 
+    user = BugherdAPI::User.find(:all).first
+    user.name.should == 'Rafael'
+    user.id.should == 1798
+    user.surname.should == ''
+    user.email.should == ''
+  end
 end

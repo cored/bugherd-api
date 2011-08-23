@@ -22,7 +22,7 @@ describe "BugherdAPI::Project" do
   it "should check for projects fields" do 
     project = BugherdAPI::Project.find(1458)
     project.name.should == 'clutchapptest'
-    project.devurl.should == ''
+    project.devurl.should == 'http://clutchapptest.ticketmaster.com'
   end
 
 end

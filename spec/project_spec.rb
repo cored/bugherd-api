@@ -19,4 +19,10 @@ describe "BugherdAPI::Project" do
     project.should_not be_nil
   end
 
+  it "should check for projects fields" do 
+    project = BugherdAPI::Project.find(1458)
+    project.name.should == 'clutchapptest'
+    project.devurl.should == ''
+  end
+
 end

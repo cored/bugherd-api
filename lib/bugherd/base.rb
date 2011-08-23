@@ -1,6 +1,6 @@
 module BugherdAPI
 
-  class Base < ActiveSupport::Base
+  class Base < ActiveResource::Base
     self.format = :xml
     self.site = 'http://www.bugherd.com/api_v1/'
     def self.inhereted(base)

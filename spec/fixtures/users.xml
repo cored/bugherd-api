@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users type="array">
+  <user>
+    <id type="integer">1798</id>
+    <email>george.rafael@gmail.com</email>
+    <name>Rafael</name>
+    <surname>George</surname>
+  </user>
+</users>

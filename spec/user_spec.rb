@@ -3,8 +3,9 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "BugherdAPI::User" do 
   before(:each) do 
     BugherdAPI.authenticate('user@email.com', '123456')
+    headers = {'Authorization' => 'Basic dXNlckBlbWFpbC5jb206MTIzNDU2', 'Accept' => 'application/xml'}
     ActiveResource::HttpMock.respond_to do |mock|
-      mock.get '/api_v1/users.xml', {}, fixture_for('users', 'xml'), 200
+      mock.get '/api_v1/users.xml', headers, fixture_for('users', 'xml'), 200
     end
   end
 

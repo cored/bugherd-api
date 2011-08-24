@@ -16,22 +16,18 @@ module BugherdAPI
   class << self
     attr_accessor :email, :password
     def authenticate(email, password)
-      self.email = email
+      self.email    = email
       self.password = password
-      resources.each do |klass|
-        update_auth(klass)
-      end
+
+      self::Base.user     = email
+      self::Base.password = password
+
     end
 
     def resources
       @resources ||= []
     end
 
-    def update_auth(resource)
-      return unless email && password
-      resource.user     = email
-      resource.password = password
-    end
   end
 
 end

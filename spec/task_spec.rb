@@ -3,9 +3,10 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "BugherdAPI::Task" do 
   before(:each) do 
     BugherdAPI.authenticate('user@email.com', '123456')
+    headers = {'Authorization' => 'Basic dXNlckBlbWFpbC5jb206MTIzNDU2', 'Accept' => 'application/xml'}
     ActiveResource::HttpMock.respond_to do |mock|
-      mock.get '/api_v1/projects/1458/tasks.xml', {}, fixture_for('tasks', 'xml'), 200
-      mock.get '/api_v1/projects/1458/tasks/4950.xml', {}, fixture_for('tasks/4950', 'xml'), 200
+      mock.get '/api_v1/projects/1458/tasks.xml', headers, fixture_for('tasks', 'xml'), 200
+      mock.get '/api_v1/projects/1458/tasks/4950.xml', headers, fixture_for('tasks/4950', 'xml'), 200
     end
     @project_id = 1458
   end

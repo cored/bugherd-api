@@ -29,6 +29,7 @@ GEM
     rspec-mocks (2.3.0)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES

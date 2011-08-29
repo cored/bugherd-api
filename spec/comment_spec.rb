@@ -24,4 +24,10 @@ describe "BugherdAPI::Comment" do
       comments.should_not be_nil
     end
   end
+
+  context "comment creation, deletion and update" do 
+    it "should create a comment"
+    it "should delete a comment"
+    it "should update a comment"
+  end
 end

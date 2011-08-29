@@ -11,6 +11,7 @@ module BugherdAPI
   autoload :User,       'bugherd/user'
   autoload :Project,    'bugherd/project'
   autoload :Task,       'bugherd/task'
+  autoload :Comment,    'bugherd/comment'
   class Error < StandardError; end
 
   class << self

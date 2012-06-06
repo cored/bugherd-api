@@ -1,30 +1,30 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "BugherdAPI::Project" do 
-  before(:each) do 
-    BugherdAPI.authenticate('user@email.com', '123456')
-    headers = {'Authorization' => 'Basic dXNlckBlbWFpbC5jb206MTIzNDU2', 'Accept' => 'application/xml'}
-    ActiveResource::HttpMock.respond_to do |mock|
-      mock.get '/api_v1/projects.xml', headers, fixture_for('projects', 'xml'), 200
-      mock.get '/api_v1/projects/1458.xml', headers, fixture_for('projects/1458','xml'), 200
-    end
-  end
+  let(:bugherd_api) { BugherdAPI.authenticate('user@email.com', '123456') }
+  let(:headers) { {'Authorization' => 'Basic dXNlckBlbWFpbC5jb206MTIzNDU2', 'Accept' => 'application/xml'} }
+  let(:project_class) { BugherdAPI::Project }
 
-  context "Project retrieval" do 
-    it "should load all projects" do 
-      projects = BugherdAPI::Project.find(:all)
-      projects.should_not be_nil 
+  describe "Retrieving projects" do 
+    before(:each) do 
+      ActiveResource::HttpMock.respond_to do |mock|
+        mock.get '/api_v1/projects.xml', headers, fixture_for('projects'), 200
+        mock.get '/api_v1/projects/1458.xml', headers, fixture_for('projects/1458'), 200
+      end
     end
 
-    it "shoulod load a single project" do 
-      project = BugherdAPI::Project.find(1458)
-      project.should_not be_nil
+    context "when calling #find(:all)" do 
+      subject { BugherdAPI::Project.find(:all) }
+      it { should be_an_instance_of Array }
+      it { should_not be_nil }
     end
 
-    it "should check for projects fields" do 
-      project = BugherdAPI::Project.find(1458)
-      project.name.should == 'clutchapptest'
-      project.devurl.should == 'http://clutchapptest.ticketmaster.com'
+    context "when calling #find(id)" do 
+      subject { BugherdAPI::Project.find(1458) }
+      it { should_not be_nil }
+      it { should be_an_instance_of project_class }
+      it { subject.name.should be_eql 'clutchapptest' }
+      it { subject.devurl.should be_eql 'http://clutchapptest.ticketmaster.com' }
     end
   end
 

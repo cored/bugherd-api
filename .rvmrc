@@ -1,1 +1,1 @@
-rvm 1.8.7@bugherd-api --create
+rvm 1.9.2@bugherd-api --create

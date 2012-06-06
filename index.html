@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bugherd-api by cored</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Bugherd-api</h1>
+        <p>Bugherd API wrapper</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/cored/bugherd-api" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/cored/bugherd-api/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/cored/bugherd-api/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>Bugherd API wrapper for Ruby (using ActiveResource) </h1>
+
+<p><a href="http://travis-ci.org/cored/bugherd-api"><img src="https://secure.travis-ci.org/cored/bugherd-api.png" alt="Build Status"></a></p>
+
+<p>This is a Ruby wrapper for the <a href="http://bugherd.com">Bugherd</a> API. </p>
+
+<p>It allows you to interface with the Bugherd API using simple
+ActiveRecord-like syntax, i.e.:</p>
+
+<div class="highlight">
+<pre><span class="no">BugherdAPI</span><span class="o">.</span><span class="n">authenticate</span> <span class="s1">'username'</span><span class="p">,</span> <span class="s1">'password'</span>
+<span class="no">BugherdAPI</span><span class="o">::</span><span class="no">Project</span><span class="o">.</span><span class="n">find</span> <span class="ss">:all</span>
+<span class="no">BugherdAPI</span><span class="o">::</span><span class="no">Project</span><span class="o">.</span><span class="n">find</span> <span class="mi">1458</span>
+</pre>
+</div>
+
+
+<h3>Installation</h3>
+
+<pre><code>$ gem install bugherd-api
+</code></pre>
+
+<h3>Usage</h3>
+
+<p>Simple require the library before using it</p>
+
+<div class="highlight">
+<pre><span class="nb">require</span> <span class="s1">'rubygems'</span>
+<span class="nb">require</span> <span class="s1">'bugherd-api'</span>
+</pre>
+</div>
+
+
+<h3>Contributing</h3>
+
+<ul>
+<li>Fork the project</li>
+<li>Create feature and tests </li>
+<li>Make a pull request</li>
+</ul><h3>License</h3>
+
+<p>Copyright (c) 2011 Rafael George</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/cored">cored</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>

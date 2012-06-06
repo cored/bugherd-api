@@ -1,5 +1,5 @@
-Bugherd API wrapper for Ruby (using ActiveResource) [~[build
-status](https://secure.travis-ci.org/cored/bugherd-api.png)](http://travis-ci.org/cored/bugherd-api)
+Bugherd API wrapper for Ruby (using ActiveResource) [~[buildstatus](https://secure.travis-ci.org/cored/bugherd-api.png)](http://travis-ci.org/cored/bugherd-api)
+===
 
 This is a Ruby wrapper for the [Bugherd](http://bugherd.com) API. 
 

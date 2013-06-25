@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Bugherd::Api::VERSION
   spec.authors       = ["Rafael George"]
   spec.email         = ["george.rafael@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Ruby wrapper for the Bugherd API}
+  spec.summary       = %q{Ruby wrapper for the Bugherd API}
   spec.homepage      = ""
   spec.license       = "MIT"
 
